@@ -1,0 +1,14 @@
+1. Here i designed a load balancer using ansible
+2. For the very first i created loadbalancer using the ansible machine not with the host machine
+3. i Had three virtual machines three of them are ubuntu machines i just converted one of the host machine as an loadbalancer using nginx_proxy method
+4. here we dont have any default configuration files as we are creating this manually so, along with that we need to create configuration part too.
+5. first i have installed nginx and haproxy server on the vm which i wanted to act as an load_balancer server
+6. then i configured the way it should react such as frontend, backend, port in the nginx_proxy
+7. And i configured loadBalancing rules in haproxy configuration file
+8. finally i works such as when anyone accessed the ip through the http server( that means port 80) they will be redirected to backend_servers
+                            
+-------------------------- The main functioning i want to introduce through this is ----------------------------
+
+1. configuration of external configuration files
+2. how to add path for it
+3. how to access those configurations when you run a specific playbook that needs those configurations 

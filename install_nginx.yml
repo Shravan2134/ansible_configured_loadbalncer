@@ -1,0 +1,12 @@
+---
+- name: install nginx
+  hosts: load_balancer
+  become: yes
+  tasks:
+    - name: install nginx
+      apt:
+        name: nginx
+        state: present
+        update_cache: yes
+
+# simple ansible playbook to install nginx on load balancer server

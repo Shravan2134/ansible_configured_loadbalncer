@@ -1,0 +1,23 @@
+---
+- name: configure HAproxy
+  hosts: load_balancer
+  become: true
+  tasks:
+    - name: configure HAproxy settings
+      template:
+        src: haproxy.cfg.j2
+        dest: /etc/haproxy/haproxy.cfg
+      notify: 
+        - restart HAProxy
+
+    - name: Enable and start HAproxy
+      service:
+        name: haproxy
+        state: started
+        enabled: true
+
+handlers:
+  - name: restart HAproxy
+    service:
+      name: HAproxy
+      state: restarted        

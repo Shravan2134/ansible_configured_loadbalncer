@@ -1,0 +1,13 @@
+---
+- name: install HAProxy for load balancer
+  hosts: load_balancer
+  become: true
+  tasks:
+    - name: debug the message
+      debug:
+        msg: "welcome to load balancer"
+    - name: install HAProxy package
+      apt:
+        name: haproxy
+        state: present
+        update_cache: yes    
