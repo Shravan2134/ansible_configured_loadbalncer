@@ -9,6 +9,6 @@
                             
 -------------------------- The main functioning i want to introduce through this is ----------------------------
 
-1. configuration of external configuration files
+1. How to write external configuration files and wherer to save it and how to aaccess it
 2. how to add path for it
 3. how to access those configurations when you run a specific playbook that needs those configurations 
